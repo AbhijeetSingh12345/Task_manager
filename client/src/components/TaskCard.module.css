@@ -1,0 +1,86 @@
+.card {
+  background:    var(--surface);
+  border:        1px solid var(--border);
+  border-radius: var(--radius-lg);
+  position:      relative;
+  transition:    box-shadow var(--transition), border-color var(--transition), opacity var(--transition);
+  overflow:      hidden;
+}
+.card:hover          { box-shadow: var(--shadow); border-color: var(--border-strong); }
+.completed           { opacity: 0.6; }
+.overdue             { border-left: 3px solid var(--accent); }
+.deleting            { opacity: 0.3; pointer-events: none; }
+
+.overdueTag {
+  display:         inline-block;
+  background:      var(--accent);
+  color:           #fff;
+  font-size:       10px;
+  font-family:     var(--font-display);
+  font-weight:     700;
+  letter-spacing:  0.08em;
+  text-transform:  uppercase;
+  padding:         2px 8px;
+}
+
+.main {
+  display:     flex;
+  align-items: flex-start;
+  gap:         12px;
+  padding:     14px 16px;
+}
+
+.checkbox {
+  width:         20px;
+  height:        20px;
+  min-width:     20px;
+  border-radius: 50%;
+  border:        2px solid var(--border-strong);
+  display:       flex;
+  align-items:   center;
+  justify-content: center;
+  margin-top:    1px;
+  transition:    all var(--transition);
+  color:         #fff;
+}
+.checkbox:hover  { border-color: var(--accent); }
+.checkbox.checked { background: var(--success); border-color: var(--success); }
+
+.content  { flex: 1; min-width: 0; }
+.title {
+  font-weight:  500;
+  color:        var(--ink);
+  line-height:  1.4;
+  word-break:   break-word;
+}
+.completed .title { text-decoration: line-through; color: var(--ink-muted); }
+.description {
+  font-size:   13px;
+  color:       var(--ink-muted);
+  margin-top:  3px;
+  line-height: 1.5;
+  word-break:  break-word;
+}
+.due        { display: inline-block; font-size: 12px; color: var(--ink-faint); margin-top: 5px; font-style: italic; }
+.dueOverdue { color: var(--accent); font-style: normal; font-weight: 600; }
+
+.actions {
+  display:    flex;
+  gap:        4px;
+  opacity:    0;
+  transition: opacity var(--transition);
+}
+.card:hover .actions { opacity: 1; }
+
+.actionBtn {
+  width:           30px;
+  height:          30px;
+  border-radius:   var(--radius);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  color:           var(--ink-muted);
+  transition:      all var(--transition);
+}
+.actionBtn:hover  { background: var(--surface-alt); color: var(--ink); }
+.deleteBtn:hover  { background: #fee2e2; color: #dc2626; }

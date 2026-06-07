@@ -1,0 +1,67 @@
+/* ── Reset ─────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin:  0;
+  padding: 0;
+}
+
+/* ── Design tokens (CSS variables) ─────────────────────────────────────── */
+:root {
+  --bg:           #f5f2ec;
+  --surface:      #ffffff;
+  --surface-alt:  #edeae3;
+  --ink:          #1a1714;
+  --ink-muted:    #6b6560;
+  --ink-faint:    #b5b0aa;
+  --accent:       #d4420a;
+  --accent-hover: #b33508;
+  --success:      #2d7a4f;
+  --border:       #ddd9d2;
+  --border-strong:#bfbab2;
+  --radius:       4px;
+  --radius-lg:    8px;
+  --shadow:       0 1px 3px rgba(26,23,20,0.08), 0 1px 2px rgba(26,23,20,0.04);
+  --shadow-md:    0 4px 12px rgba(26,23,20,0.10), 0 2px 4px rgba(26,23,20,0.06);
+  --font-display: "Syne", sans-serif;
+  --font-body:    "Instrument Sans", sans-serif;
+  --transition:   150ms ease;
+}
+
+/* ── Base styles ────────────────────────────────────────────────────────── */
+html, body { height: 100%; }
+
+body {
+  background:              var(--bg);
+  color:                   var(--ink);
+  font-family:             var(--font-body);
+  font-size:               15px;
+  line-height:             1.6;
+  -webkit-font-smoothing:  antialiased;
+}
+
+#root { min-height: 100vh; }
+
+button {
+  font-family: var(--font-body);
+  cursor:      pointer;
+  border:      none;
+  background:  none;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  font-size:   15px;
+}
+
+/* ── Animations ─────────────────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.animate-in { animation: fadeIn 200ms ease forwards; }

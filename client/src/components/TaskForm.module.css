@@ -1,0 +1,96 @@
+.card {
+  background:    var(--surface);
+  border:        1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow:    var(--shadow-md);
+  overflow:      hidden;
+  animation:     slideDown 200ms ease;
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.cardHeader {
+  background:    var(--surface-alt);
+  border-bottom: 1px solid var(--border);
+  padding:       12px 20px;
+}
+.cardTitle {
+  font-family:     var(--font-display);
+  font-size:       13px;
+  font-weight:     700;
+  letter-spacing:  0.06em;
+  text-transform:  uppercase;
+  color:           var(--ink-muted);
+}
+
+.form {
+  padding:        20px;
+  display:        flex;
+  flex-direction: column;
+  gap:            16px;
+}
+.row    { display: flex; gap: 16px; align-items: flex-start; }
+.field  { display: flex; flex-direction: column; gap: 5px; }
+.grow   { flex: 1; }
+
+.label {
+  font-size:       12px;
+  font-weight:     600;
+  letter-spacing:  0.04em;
+  text-transform:  uppercase;
+  color:           var(--ink-muted);
+}
+.required { color: var(--accent); }
+
+.input, .textarea {
+  background:    var(--bg);
+  border:        1px solid var(--border);
+  border-radius: var(--radius);
+  padding:       9px 12px;
+  color:         var(--ink);
+  outline:       none;
+  transition:    border-color var(--transition);
+  width:         100%;
+}
+.textarea      { resize: vertical; min-height: 60px; }
+.input:focus, .textarea:focus {
+  border-color: var(--accent);
+  background:   var(--surface);
+}
+.inputError  { border-color: #ef4444; }
+.fieldError  { font-size: 12px; color: #ef4444; }
+
+.actions {
+  display:         flex;
+  justify-content: flex-end;
+  gap:             10px;
+  padding-top:     4px;
+}
+.cancelBtn {
+  font-size:     14px;
+  font-weight:   500;
+  padding:       9px 18px;
+  border-radius: var(--radius);
+  color:         var(--ink-muted);
+  background:    var(--surface-alt);
+  border:        1px solid var(--border);
+  transition:    all var(--transition);
+}
+.cancelBtn:hover { color: var(--ink); border-color: var(--border-strong); }
+
+.submitBtn {
+  font-family:    var(--font-display);
+  font-size:      14px;
+  font-weight:    700;
+  padding:        9px 20px;
+  border-radius:  var(--radius);
+  background:     var(--accent);
+  color:          #fff;
+  transition:     background var(--transition);
+}
+.submitBtn:hover:not(:disabled) { background: var(--accent-hover); }
+.submitBtn:disabled, .cancelBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+@media (max-width: 520px) { .row { flex-direction: column; } }

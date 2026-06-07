@@ -1,0 +1,20 @@
+[
+  {
+    "id": "c62aa9ad-e76b-4d54-b9ce-cb57a1090245",
+    "title": "Assignment Submission",
+    "description": "",
+    "dueDate": "2026-06-08",
+    "completed": false,
+    "createdAt": "2026-06-07T11:18:37.250Z",
+    "updatedAt": "2026-06-07T11:18:37.250Z"
+  },
+  {
+    "id": "f87b3cd1-8e7e-4787-9a2b-5470ab62067f",
+    "title": "Gym",
+    "description": "",
+    "dueDate": "2026-06-07",
+    "completed": false,
+    "createdAt": "2026-06-07T11:17:47.701Z",
+    "updatedAt": "2026-06-07T11:17:47.702Z"
+  }
+]
