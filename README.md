@@ -1,7 +1,7 @@
 # ✦ Taskly — Personal Task Manager
 
-> **Studio Graphene Assessment — Exercise 1: Personal Task Manager**
-> A full-stack task manager built with Node.js + Express (backend) and React + Vite (frontend). Users can create, view, edit, delete, and filter personal tasks. Tasks persist across server restarts via a JSON file.
+> Exercise : Personal Task Manager**
+> A full-stack task manager built with Node.js + Express (backend) and React + Vite (frontend). Users can create, view, edit, delete and filter personal tasks. Tasks persist across server restarts via a JSON file.
 
 ---
 ## ✨ Features
@@ -322,10 +322,6 @@ Given more time, I would add:
 
 ## 👤 Author
 
-**Abhijeet** *(replace with your full name)*
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your@email.com
+**Abhijeet Singh**
+- Email: abhijeetsinghrajput05@gmail.com
 
----
-
-*Built for the Studio Graphene Full Stack Developer Assessment — Node.js + React Programme*
